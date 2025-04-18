@@ -1,11 +1,11 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+<footer class="text-center text-lg-start text-muted" id="footer">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <section class="d-flex justify-content-center justify-content-lg-between border-top">
       <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
+      {{-- <div class="me-5 d-none d-lg-block">
         <span>Get connected with us on social networks:</span>
-      </div>
+      </div> --}}
       <!-- Left -->
   
       <!-- Right -->
@@ -113,9 +113,9 @@
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-4" id="footerBottomBar">
+      © 2025 Copyright:
+      <a class="fw-bold" href="#" id="footerBottomBarText">Presto.it</a>
     </div>
     <!-- Copyright -->
   </footer>

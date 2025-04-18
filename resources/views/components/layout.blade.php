@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    <x-navbar/>
+    <x-navbar></x-navbar>
 
-    <div class="vh-100">
+    <div class="min-vh-100" id="mainElement">
         {{ $slot }}
     </div>
 
