@@ -1,11 +1,11 @@
 <x-layout>
     <div class="container">
-        <div class="row justify-content-center align-items-center text-center">
+        <div class="row justify-content-center align-items-center text-center heightCustom">
             <div class="col-12">
                 <h1 class="display-4">Dettaglio Articolo: {{ $article->title }}</h1>
             </div>
         </div>
-        <div class="row justify-content-center py-5">
+        <div class="row justify-content-center py-5 heightCustom">
             <div class="col-12 col-md-6 mb-3">
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">

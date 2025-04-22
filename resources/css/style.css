@@ -11,8 +11,17 @@
 }
 
 #navbar {
+
     background-color: var(--secondary-color-semi-transparent);    
     border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+#navbar a{
+    font-size:calc(1.1rem + 15%);
+}
+
+#navbar > *{
+    padding-right: 3%;
 }
 
 #footer {
@@ -34,4 +43,18 @@
 #footerBottomBarText {
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+.cardBody > *{
+    margin-top: 5px;
+}
+
+.heightCustom{
+    min-height: 60vh;
+}
+
+.logo{
+    height: 80px;
+    margin: -5px;
+
 }

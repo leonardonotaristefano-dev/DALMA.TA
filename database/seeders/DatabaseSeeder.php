@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
 {
     public $categories = [
         'elettronica',
-        'abbigliameto',
+        'abbigliamento',
         'salute e bellezza',
         'casa e giardinaggio',
         'giocattoli',
