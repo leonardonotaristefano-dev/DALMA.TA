@@ -33,7 +33,7 @@
                       <input type="password" class="form-control bg-dark text-white" id="password_confirmation" name="password_confirmation">
                       @error('password_confirmation')<div class="text-danger">{{ $message }}</div>@enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    <button type="submit" class="btn buttonOpacity">Registrati</button>
                 </form>
             </div>
         </div>

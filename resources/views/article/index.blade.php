@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
-        <div class="row justify-content-center text-center align-item-center heightCustom">
-            <div class="col-12 pt-4">
+        <div class="row justify-content-center text-center align-items-center heightCustom">
+            <div class="col-12">
                 <h1 class="display-1 title_m">Tutti gli articoli</h1>
             </div>
         </div>

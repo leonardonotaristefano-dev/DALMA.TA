@@ -4,7 +4,7 @@
             {{session('success')}}
         </div> 
     @endif
-    <form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
+    <form class="shadow rounded p-5 my-5" wire:submit="store">
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror bg-dark text-white" id="title" wire:model.blur="title">
@@ -39,7 +39,7 @@
             @enderror
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-dark"> Pubblica </button>
+            <button type="submit" class="btn buttonOpacity"> Pubblica </button>
         </div>
     </form>
 </div>

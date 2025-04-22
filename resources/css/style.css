@@ -3,6 +3,7 @@
     --secondary-color: #7699d4;
     --secondary-color-semi-transparent: rgba(118, 152, 212, 0.225);
     --accent-color: #fbda9b;
+    --accent-color-semi-transparent: #fbd99b52;
 }
 
 * {
@@ -53,7 +54,7 @@
 }
 
 .heightCustom{
-    min-height: 60vh;
+    min-height: 30vh;
 }
 
 .logo{
@@ -67,6 +68,19 @@
     text-transform: uppercase;
     font-weight: 500;
     font-optical-sizing: auto;
+}
+
+.formBody {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.buttonOpacity {
+    background-color: var(--accent-color-semi-transparent);
+    border: #7699d4 1px solid;
+}
+
+.inputBg {
+    background-color: var(--secondary-color-semi-transparent);
 }
 
 /* .text_i{
