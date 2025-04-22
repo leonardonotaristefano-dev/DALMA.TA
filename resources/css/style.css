@@ -5,6 +5,9 @@
     --accent-color: #fbda9b;
 }
 
+* {
+    font-family: "Inter", sans-serif;
+}
 
 #mainElement {
     background: linear-gradient(var(--secondary-color-semi-transparent), var(--primary-color));
@@ -58,3 +61,14 @@
     margin: -5px;
 
 }
+
+.title_m {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-optical-sizing: auto;
+}
+
+/* .text_i{
+    font-family: "Inter", sans-serif;
+} */

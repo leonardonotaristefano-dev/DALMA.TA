@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center text-center heightCustom">
             <div class="col-12">
-                <h1 class="display-4">Dettaglio Articolo: {{ $article->title }}</h1>
+                <h1 class="display-4 title_m">Dettaglio Articolo: {{ $article->title }}</h1>
             </div>
         </div>
         <div class="row justify-content-center py-5 heightCustom">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-3 text-center">
-                <h2 class="display-5"> <span class="fw-bold">Titolo: </span> {{$article->title}}</h2>
+                <h2 class="display-5 title_m"> <span class="fw-bold title_m">Titolo: </span> {{$article->title}}</h2>
                 <div class="d-flex flex-column justify-content-center h-75">
                     <h4 class="fw-bold">Prezzo: {{$article->price}} €</h4>
                     <h5>Descrizione:</h5>

@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container">
-        <div class="row py-5 justify-content-center align-items-center text-center heightCustom">
-            <div class="col-12 pt-5">
-                <h1 class="display-2">Articoli della categoria <span class="fst-italic fw-bold">{{$category->name}}</span></h1>
+        <div class="row justify-content-center align-items-center text-center heightCustom">
+            <div class="col-12 pt-4">
+                <h1 class="display-2 title_m">Articoli della categoria <span class="fst-italic title_m">{{$category->name}}</span></h1>
             </div>
         </div>
         <div class="row justify-content-center align-items-center py-5 heightCustom">
