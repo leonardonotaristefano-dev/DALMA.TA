@@ -1,5 +1,5 @@
 <div class="card mx-auto shadow text-center mb-3">
-    <img src="https://picsum.photos/200?random={{ $article->id }}" class="card-img-top" alt="immagine dell'articolo {{ $article->title }}">
+    <img src="https://picsum.photos/500?random={{ $article->id }}" class="card-img-top" alt="immagine dell'articolo {{ $article->title }}">
     <div class="card-body cardBody">
         <h4 class="card-title title_m">{{ $article->title }}</h4>
         <h6 class="card-subtitle text-body-secondary">{{ $article->price }}€</h6>
