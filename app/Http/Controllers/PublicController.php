@@ -9,7 +9,7 @@ class PublicController extends Controller
 {
     public function homepage(){ 
         
-        $articles = Article::take(8)->orderBy('created_at', 'desc')->get(); 
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(8)->get(); 
         return view('welcome', compact('articles'));
     }    
 }

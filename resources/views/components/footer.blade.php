@@ -58,7 +58,7 @@
         <!-- Grid column -->
         
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        {{-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Products
@@ -75,7 +75,8 @@
           <p>
             <a href="#!" class="text-reset">Laravel</a>
           </p>
-        </div>
+        </div> --}}
+        
         <!-- Grid column -->
         
         <!-- Grid column -->
@@ -117,6 +118,15 @@
     </div>
   </section>
   <!-- Section: Links  -->
+  @if(Auth::user() && !Auth::user()->is_revisor)
+  <div class="d-flex w-100 mb-3">
+    <div class="justify-content-center align-items-center text-center w-100">                
+        <h5 class="title_m">Vuoi diventare revisore?</h5>
+        <p class="text-muted">Clicca il bottone sottostante farai richiesta al nostro admin</p>
+        <a href="{{ route('become.revisor') }}" class="btn buttonOpacity">Diventa revisore</a>        
+    </div>
+  </div>
+  @endif 
   
   <!-- Copyright -->
   <div class="text-center p-4" id="footerBottomBar">
