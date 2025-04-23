@@ -5,7 +5,7 @@
                 <h1 class="display-2 title_m">Articoli della categoria <span class="fst-italic title_m">{{$category->name}}</span></h1>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center py-5 heightCustom">
+        <div class="row justify-content-center align-items-center py-5 heightCustom px-5">
             @forelse ($articles as $article)
                 <div class="col-12 col-md-3">
                     <x-card :article="$article" />

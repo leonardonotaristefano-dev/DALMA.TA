@@ -3,7 +3,7 @@
         <div class="row heightCustom justify-content-center align-item-center">
             <div class="col-12">
                 <h1 class="display-1 my-5 title_m">Presto.it</h1>
-                <div class="row justify-content-center align-items-center py-5 heightCustom">
+                <div class="row justify-content-center align-items-center py-5 heightCustom mx-5">
                     @forelse ($articles as $article)
                         <div class="col-12 col-md-3">
                             <x-card :article="$article" />
