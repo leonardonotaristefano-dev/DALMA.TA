@@ -31,7 +31,7 @@ class CreateArticleForm extends Component
 
         $this->reset();
 
-        session()->flash('success', 'Articolo creato correttamente');
+        return redirect()->route('homepage')->with('message', 'Articolo creato correttamente');
     }
 
     public function render()
