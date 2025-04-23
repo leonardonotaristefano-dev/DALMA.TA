@@ -33,7 +33,7 @@
                 <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
                 <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">...</a></li>
                 </ul>
             </li>
           @endguest
@@ -44,7 +44,9 @@
                 </a>
                 <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{route('create.article')}}">Crea</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                @if (Auth::user()->is_revisor)     
+                <li class="nav-item"><a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25" href="{{route('revisor.index')}}">Zona Revisore</a></li>
+                @endif
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                 <form action="{{route('logout')}}" method="POST" id="form-logout">@csrf</form>
