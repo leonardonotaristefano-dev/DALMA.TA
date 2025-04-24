@@ -75,7 +75,7 @@
                 @endauth
             </ul>
         </div>
-        <form action="" class="d-flex ms-auto ps-4" role="search" method="GET">
+        <form action="{{ route('article.search') }}" class="d-flex ms-auto ps-4" role="search" method="GET">
             <div class="input-group">
                 <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
                 <button type="submit" class="input-grou-text btn buttonOpacity" id="basic-addon2">
