@@ -41,18 +41,17 @@
     <div class="container-fluid text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
-        <div class="col-md-2 col-lg-3 col-xl-2 mx-auto mb-4">
+        <div class="col-md-3 col-lg-3 col-xl-2 mx-auto ps-5 mb-4">
           <img src="{{Storage::url('media/imageGruppo.webp')}}" alt="Woof Woof Bitc*" id="footerLogo">
         </div>
         <!-- Grid column -->
         <div class="col-md-2 col-lg-3 col-xl-2 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem"></i>DALMA.TA S.P.A.
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Dalma.ta è una piattaforma e-commerce dinamica e innovativa, dove è possibile scoprire e acquistare articoli di diverse categorie, dal lifestyle alla tecnologia, dalla casa alla cura della persona.
           </p>
         </div>
         <!-- Grid column -->
@@ -83,34 +82,34 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            Link utili
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="#!" class="text-reset">Chi siamo</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="#!" class="text-reset">Supporto</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="#!" class="text-reset">Servizi</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="#!" class="text-reset">Accessibilità</a>
           </p>
         </div>
         <!-- Grid column -->
         
         <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div class="col-md-2 col-lg-3 col-xl-3 mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
+          <p><i class="fas fa-home"></i> New York, NY 10012, US</p>
           <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            <i class="fas fa-envelope"></i>
+            Dalma.ta@hotmail.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <p><i class="fas fa-phone"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -122,7 +121,7 @@
   <div class="d-flex w-100 mb-3">
     <div class="justify-content-center align-items-center text-center w-100">                
         <h5 class="title_m">Vuoi diventare revisore?</h5>
-        <p class="text-muted">Clicca il bottone sottostante farai richiesta al nostro admin</p>
+        <p class="text-muted">Clicca il bottone sottostante e inoltra una richiesta al nostro admin!</p>
         <a href="{{ route('become.revisor') }}" class="btn buttonOpacity">Diventa revisore</a>        
     </div>
   </div>
