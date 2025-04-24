@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use Livewire\Attributes\Session;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,4 +39,6 @@ class CreateArticleForm extends Component
     {
         return view('livewire.create-article-form');
     }
+
+    
 }

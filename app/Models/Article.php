@@ -28,14 +28,16 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function setAccepted($value){
+    public function setAccepted($value, $accepted_at, $editor_id){
         $this->is_accepted = $value;
+        $this->accepted_at = $accepted_at;
+        $this->editor_id = $editor_id;
         $this->save();
         return true;
     }
 
     public static function toBeRevisionedCount(){
-        return Article::where('is_accepted', null)->count();
+        return Article::whereNull('accepted_at')->count();
     }
 
     public function toSearchableArray(){

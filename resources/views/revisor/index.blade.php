@@ -37,17 +37,31 @@
                         <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+                            <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta articolo</button>
                         </form>
                         <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
+                            <button class="btn btn-success py-2 px-5 fw-bold">Accetta articolo</button>
                         </form>
+                        @if ($last_article)
+                            <form action="{{route('undo', ['article' => $last_article])}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button class="btn btn-warning py-2 px-5 fw-bold">Annulla ultima revisione</button>
+                            </form>
+                        @endif
                     </div>
                 </div>
             </div>
         @else
+            @if ($last_article)
+                <form action="{{route('undo', ['article' => $last_article])}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button class="btn btn-warning py-2 px-5 fw-bold">Annulla {{$last_article->title}}</button>
+                </form>
+            @endif
             <div class="row justify-content-center align-items-center heightCustom text-center">
                 <div class="col-12">
                     <h1 class="display-4 title_m">Non ci sono articoli da revisionare</h1>
