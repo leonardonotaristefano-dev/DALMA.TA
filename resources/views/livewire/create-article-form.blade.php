@@ -47,7 +47,10 @@
                         @foreach ($images as $key => $image)
                             <div class="col d-flex flex-column align-items-center my-3">
                                 <div class="imgPreview mx-auto shadow rounded"
-                                    style="background-image: url({{ $image->temporaryUrl() }});"></div>
+                                    style="background-image: url({{ $image->temporaryUrl() }});">
+                                </div>
+                                <button type="button" class="btn btn-danger mt-3"
+                                wire:click="removeImage({{$key}})">Rimuovi</button>
                             </div>
                         @endforeach
                     </div>

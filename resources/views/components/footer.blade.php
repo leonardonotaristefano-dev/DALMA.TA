@@ -45,7 +45,7 @@
           <img src="{{Storage::url('media/imageGruppo.webp')}}" alt="Woof Woof Bitc*" id="footerLogo">
         </div>
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-3 col-xl-2 mx-auto mb-4">
+        <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
             <i class="fas fa-gem"></i>DALMA.TA S.P.A.
@@ -79,7 +79,7 @@
         <!-- Grid column -->
         
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Link utili
@@ -100,7 +100,7 @@
         <!-- Grid column -->
         
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-3 col-xl-3 mb-md-0 mb-4">
+        <div class="col-md-3 col-lg-3 col-xl-3 mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
           <p><i class="fas fa-home"></i> New York, NY 10012, US</p>
