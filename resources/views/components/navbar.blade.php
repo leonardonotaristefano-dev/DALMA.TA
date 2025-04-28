@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg p-0" id="navbar">
-    <div class="container-fluid">
+    <div class="container-fluid pe-2">
         <a class="navbar-brand fw-bold" href="{{ route('homepage') }}"><img
                 src="{{ Storage::url('media/imageGruppo.webp') }}" alt="" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -9,18 +9,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">Tutti gli articoli</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">{{__('ui.allArticles')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Categorie
+                        {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
-                                    href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                                href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name")}}</a>
+
                             </li>
                             @if (!$loop->last)
                                 <hr class="dropdown-divider">
@@ -32,11 +33,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            {{__('ui.welcome')}}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
-                            <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                            <li><a class="dropdown-item" href="{{ route('login') }}">{{__('ui.login')}}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.register')}}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -52,14 +53,14 @@
                         @endif
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Ciao, {{ Auth::user()->name }}
+                            {{__('ui.welcome')}}, {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('create.article') }}">Crea</a></li>
+                            <li><a class="dropdown-item" href="{{ route('create.article') }}">{{__('ui.create')}}</a></li>
                             @if (Auth::user()->is_revisor)
                                 <li class="nav-item"><a
                                         class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
-                                        href="{{ route('revisor.index') }}">Zona Revisore
+                                        href="{{ route('revisor.index') }}">{{__('ui.revision')}}
                                     </a>
                                 </li>
                             @endif
@@ -67,7 +68,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#"
-                                    onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                                    onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.logout')}}</a>
                             </li>
                             <form action="{{ route('logout') }}" method="POST" id="form-logout">@csrf</form>
                         </ul>
@@ -77,9 +78,9 @@
         </div>
         <form action="{{ route('article.search') }}" class="d-flex ms-auto ps-4" role="search" method="GET">
             <div class="input-group">
-                <input type="search" name="query" class="form-control" placeholder="Cerca articolo..." aria-label="search">
+                <input type="search" name="query" class="form-control" placeholder="{{__('ui.search')}}" aria-label="search">
                 <button type="submit" class="input-grou-text btn buttonOpacity" id="basic-addon2">
-                    Cerca
+                    {{__('ui.btnSearch')}}
                 </button>
             </div>
         </form>

@@ -51,7 +51,7 @@
             <i class="fas fa-gem"></i>DALMA.TA S.P.A.
           </h6>
           <p>
-            Dalma.ta è una piattaforma e-commerce dinamica e innovativa, dove è possibile scoprire e acquistare articoli di diverse categorie, dal lifestyle alla tecnologia, dalla casa alla cura della persona.
+            {{__('ui.footerInfo')}}
           </p>
         </div>
         <!-- Grid column -->
@@ -82,19 +82,19 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Link utili
+            {{__('ui.footerLinks')}}
           </h6>
           <p>
-            <a href="#!" class="text-reset">Chi siamo</a>
+            <a href="#!" class="text-reset">{{__('ui.aboutUs')}}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Supporto</a>
+            <a href="#!" class="text-reset">{{__('ui.support')}}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Servizi</a>
+            <a href="#!" class="text-reset">{{__('ui.services')}}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Accessibilità</a>
+            <a href="#!" class="text-reset">{{__('ui.accessibility')}}</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -102,7 +102,7 @@
         <!-- Grid column -->
         <div class="col-md-3 col-lg-3 col-xl-3 mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
+          <h6 class="text-uppercase fw-bold mb-4">{{__('ui.contacts')}}</h6>
           <p><i class="fas fa-home"></i> New York, NY 10012, US</p>
           <p>
             <i class="fas fa-envelope"></i>

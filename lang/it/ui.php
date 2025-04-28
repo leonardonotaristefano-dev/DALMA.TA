@@ -1,5 +1,35 @@
 <?php
 return [
+    // navbar
     'hello' => 'Ciao',
     'allArticles' => 'Tutti gli articoli',
+    'categories' => 'Categorie',
+    'welcome' => 'Benvenuto',
+    'search' => 'Cerca un articolo...',
+    'btnSearch' => 'Cerca',
+    'login' => 'Accedi',
+    'register' => 'Registrati',
+    'logout' => 'Esci',
+    'revision' => 'Zona di revisione',
+    'create' => 'Crea',
+    // dropdown
+    'abbigliamento' => 'Abbigliamento',
+    'accessori' => 'Accessori',
+    'animali domestici' => 'Animali Domestici',
+    'casa e giardinaggio' => 'Casa e Giardinaggio',
+    'elettronica' => 'Elettronica',
+    'salute e bellezza' => 'Salute e Bellezza',
+    'sport' => 'Sport',
+    'giocattoli' => 'Giocattoli',
+    'motori' => 'Motori',
+    'libri e riviste' => 'Libri e Riviste',
+    // footer
+    'publish' => 'Pubblica articolo',
+    'footerLinks' => 'Links',
+    'contacts' => 'Contatti',
+    'footerInfo' => 'Dalma.ta è una piattaforma e-commerce dinamica e innovativa, dove è possibile scoprire e acquistare articoli di diverse categorie, dal lifestyle alla tecnologia, dalla casa alla cura della persona.',
+    'aboutUs' => 'Chi siamo',
+    'services' => 'Servizi',
+    'support' => 'Supporto',
+    'accessibility' => 'Accessibilità',
 ];
