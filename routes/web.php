@@ -17,3 +17,4 @@ Route::get('/search/article', [PublicController::class, 'searchArticles'])->name
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo');
+Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

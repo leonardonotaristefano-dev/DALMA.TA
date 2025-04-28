@@ -83,5 +83,10 @@
                 </button>
             </div>
         </form>
+        <div class="ms-2">
+        <x-_locale lang="it"/>
+        <x-_locale lang="en"/>
+        <x-_locale lang="pt"/>
+    </div>
     </div>
 </nav>

@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center text-center align-items-center heightCustom">
             <div class="col-12">
-                <h1 class="display-1 title_m">Tutti gli articoli</h1>
+                <h1 class="display-1 title_m">{{__('ui.allArticles')}}</h1>
             </div>
         </div>
         <div class="row justify-content-center align-items-center py-5 heightCustom px-5">

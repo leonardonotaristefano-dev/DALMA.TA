@@ -20,3 +20,5 @@ SCOUT_DRIVER=tntsearch
 
 php artisan scout:flush "App\Models\Article"
 php artisan scout:import "App\Models\Article"
+
+composer require outhebox/blade-flags
