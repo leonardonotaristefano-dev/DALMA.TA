@@ -28,7 +28,7 @@
                         @endif
                     </div>
                 @else
-                    <img src="https://picsum.photos/500?random={{$i}}" alt="Nessuna foto inserita dall'utente">
+                    <img src="https://picsum.photos/500" alt="Nessuna foto inserita dall'utente">
                 @endif
             </div>
             <div class="col-12 col-md-6 mb-3 text-center">

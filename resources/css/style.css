@@ -97,5 +97,9 @@
     background-size: cover;
     height: 120px;
     width: 120px;
+}
 
+.cardTopImg {
+    height: 30vh;
+    padding: 10px;
 }
