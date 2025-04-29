@@ -18,9 +18,9 @@
 
         @if ($article_to_check)
             @if ($article_to_check->images->count() > 0)
-                <div class="row d-flex justify-content-center"> 
+                <div class="row d-flex justify-content-center align-items-center mt-5"> 
                     @foreach ($article_to_check->images as $key => $image)
-                        <div class="col-6 col-md-4 mb-4">
+                        <div class="col-6 col-md-4 d-flex justify-content-center align-items-center">
                             <img src="{{$image->getUrl(300, 300)}}" class="revisorImage img-fluid rounded shadow" alt="Immagine {{$key +1}} dell'articolo {{ $article_to_check->title }}">
                         </div>
                     @endforeach
@@ -28,37 +28,38 @@
             @else
                 <div class="row d-flex justify-content-center"> 
                     @for ($i = 0; $i < 6; $i++)
-                        <div class="col-6 col-md-4 mb-4 text-center">
+                        <div class="col-6 col-md-4 text-center d-flex align-items-center justify-content-center">
                             <img src="https://picsum.photos/500?random={{$i}}" class="img-fluid rounded shadow" alt="Immagine segnaposto">
                         </div>
                     @endfor
                 </div>
             @endif
-                    <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
-                        <div>
+                <div class="row justify-content-center align-items-center text-center mt-5">
+                    <div class="col-md-4 ps-4 d-flex flex-column justify-content-center text-center align-items-center">
+                        <div class="d-flex flex-column justify-content-center text-center align-items-center mx-auto">
                             <h1 class="title_m">{{ $article_to_check->title }}</h1>
                             <h3>Autore: {{ $article_to_check->user->name }}</h3>
                             <h4>{{ $article_to_check->price }}€</h4>
                             <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
                             <p class="h6">{{ $article_to_check->description }}</p>
                         </div>
-                        <div class="d-flex pb-4 justify-content-around">
+                        <div class="d-flex pb-4 justify-content-center align-items-center mt-5 mb-2">
                             <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta articolo</button>
+                                <button class="revisorButton btn btn-danger py-2 px-5 fw-bold ms-2">Rifiuta articolo</button>
                             </form>
                             <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button class="btn btn-success py-2 px-5 fw-bold">Accetta articolo</button>
+                                <button class="revisorButton btn btn-success py-2 px-5 fw-bold ms-2">Accetta articolo</button>
                             </form>
                             @if ($last_article)
-                                <form action="{{route('undo', ['article' => $last_article])}}" method="POST">
-                                    @csrf
-                                    @method('PATCH')
-                                    <button class="btn btn-warning py-2 px-5 fw-bold">Annulla ultima revisione</button>
-                                </form>
+                            <form action="{{route('undo', ['article' => $last_article])}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button class="revisorButton btn btn-warning py-2 px-5 fw-bold ms-2 text-white">Annulla revisione</button>
+                            </form>
                             @endif
                         </div>
                     </div>

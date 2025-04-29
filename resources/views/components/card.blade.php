@@ -7,5 +7,5 @@
             <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-info btn-rounded">Dettaglio</a>           
         </div>
     </div>
-    <a href="{{route('byCategory', ['category' => $article->category])}}" class="badgeArticle text-end badge bg-info text-decoration-none">#{{ucfirst($article->category->name)}}</a>
+    <a href="{{route('byCategory', ['category' => $article->category])}}" class="badgeArticle text-end badge text-decoration-none">#{{ucfirst($article->category->name)}}</a>
 </div>

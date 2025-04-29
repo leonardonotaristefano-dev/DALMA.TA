@@ -122,3 +122,8 @@
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
 }
+
+.revisorButton {
+    border: rgba(0, 0, 0, 0.600) 2px solid;
+    width: 15em;
+}
