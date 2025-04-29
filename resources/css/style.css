@@ -103,3 +103,22 @@
     height: 30vh;
     padding: 10px;
 }
+
+.cardBackground {
+    border: #7699d4 1px solid;
+    background: linear-gradient(var(--secondary-color-semi-transparent), var(--primary-color));
+}
+
+.revisorImage{
+    height: 50vh;
+    padding: 10px;
+}
+
+.badgeArticle{
+    background-color: var(--accent-color);
+    border: transparent 1px solid;
+    border-top: #7699d4 1px solid;
+    color: var(--secondary-color);
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}

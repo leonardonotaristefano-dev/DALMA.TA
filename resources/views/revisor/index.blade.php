@@ -21,7 +21,7 @@
                 <div class="row d-flex justify-content-center"> 
                     @foreach ($article_to_check->images as $key => $image)
                         <div class="col-6 col-md-4 mb-4">
-                            <img src="{{$image->getUrl(300, 300)}}" class="img-fluid rounded shadow" alt="Immagine {{$key +1}} dell'articolo {{ $article_to_check->title }}">
+                            <img src="{{$image->getUrl(300, 300)}}" class="revisorImage img-fluid rounded shadow" alt="Immagine {{$key +1}} dell'articolo {{ $article_to_check->title }}">
                         </div>
                     @endforeach
                 </div>
