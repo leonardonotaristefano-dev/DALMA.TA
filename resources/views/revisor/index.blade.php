@@ -47,18 +47,18 @@
                             <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button class="revisorButton btn btn-danger py-2 px-5 fw-bold ms-2">Rifiuta articolo</button>
+                                <button id="rejectButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">Rifiuta articolo</button>
                             </form>
                             <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button class="revisorButton btn btn-success py-2 px-5 fw-bold ms-2">Accetta articolo</button>
+                                <button id="acceptButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">Accetta articolo</button>
                             </form>
                             @if ($last_article)
                             <form action="{{route('undo', ['article' => $last_article])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button class="revisorButton btn btn-warning py-2 px-5 fw-bold ms-2 text-white">Annulla revisione</button>
+                                <button id="undoButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">Annulla revisione</button>
                             </form>
                             @endif
                         </div>

@@ -24,11 +24,6 @@
                         </div>
                     @endforelse
                 </div>
-                <div class="my-3">
-                    @auth
-                        <a href="{{ route('create.article') }}" class="btn btn-dark">{{__('ui.publish')}}</a>
-                    @endauth
-                </div>
             </div>
         </div>
     </div>

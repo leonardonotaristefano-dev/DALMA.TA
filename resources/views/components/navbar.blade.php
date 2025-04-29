@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg p-0" id="navbar">
-    <div class="container-fluid pe-2">
+    <div class="container-fluid pe-lg-2">
         <a class="navbar-brand fw-bold" href="{{ route('homepage') }}"><img
                 src="{{ Storage::url('media/imageGruppo.webp') }}" alt="" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -47,19 +47,22 @@
                 @endguest
                 @auth
                     <li class="nav-item dropdown">
-                        @if (Auth::user()->is_revisor)
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ App\Models\Article::toBeRevisionedCount() }}</span>
-                        @endif
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {{__('ui.welcome')}}, {{ Auth::user()->name }}
-                        </a>
+                            @if (Auth::user()->is_revisor)
+                                <span
+                                    class="position-absolute top-0 start-10 translate-middle badge rounded-pill bg-danger">{{ App\Models\Article::toBeRevisionedCount() }}</span>
+                            @endif
+                            </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('create.article') }}">{{__('ui.create')}}</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             @if (Auth::user()->is_revisor)
-                                <li class="nav-item"><a
-                                        class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
+                                <li class=""><a
+                                        class="dropdown-item "
                                         href="{{ route('revisor.index') }}">{{__('ui.revision')}}
                                     </a>
                                 </li>
@@ -76,18 +79,18 @@
                 @endauth
             </ul>
         </div>
-        <form action="{{ route('article.search') }}" class="d-flex ms-auto ps-4" role="search" method="GET">
+        <form action="{{ route('article.search') }}" class="d-flex ps-lg-4" role="search" method="GET">
             <div class="input-group">
                 <input type="search" name="query" class="form-control" placeholder="{{__('ui.search')}}" aria-label="search">
-                <button type="submit" class="input-grou-text btn buttonOpacity" id="basic-addon2">
+                <button type="submit" class="input-group-text btn buttonOpacity" id="basic-addon2">
                     {{__('ui.btnSearch')}}
                 </button>
             </div>
         </form>
-        <div class="ms-2">
-        <x-_locale lang="it"/>
-        <x-_locale lang="en"/>
-        <x-_locale lang="pt"/>
-    </div>
+        <div class="ms-lg-2 d-flex justify-content-center w-auto">
+            <x-_locale lang="it"/>
+            <x-_locale lang="en"/>
+            <x-_locale lang="pt"/>
+        </div>
     </div>
 </nav>
