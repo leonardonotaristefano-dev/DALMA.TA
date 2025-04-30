@@ -29,6 +29,7 @@
 
         {{-- sezione immagini --}}
         <div class="mb-3">
+            <label for="images" class="form-label">Immagini</label>
             <input type="file" wire:model.live="temporary_images" multiple
                 class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
             @error('temporary_images.*')
