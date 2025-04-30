@@ -87,7 +87,7 @@
                 </button>
             </div>
         </form>
-        <div class="ms-lg-2 d-flex justify-content-center w-auto">
+        <div class="ms-lg-2 d-flex justify-content-center responsiveObject">
             <x-_locale lang="it"/>
             <x-_locale lang="en"/>
             <x-_locale lang="pt"/>

@@ -41,7 +41,7 @@
     <div class="container-fluid text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
-        <div class="col-md-3 col-lg-3 col-xl-2 mx-auto ps-5 mb-4">
+        <div class="col-md-3 col-lg-3 col-xl-2 mx-auto ps-lg-5 mb-4">
           <img src="{{Storage::url('media/imageGruppo.webp')}}" alt="Woof Woof Bitc*" id="footerLogo">
         </div>
         <!-- Grid column -->

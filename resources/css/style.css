@@ -58,6 +58,8 @@
 
 #acceptButton{
     background-color: var(--accept-color);
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 #rejectButton{
@@ -70,6 +72,21 @@
 
 #cardTitle{
     min-height: 4rem;    
+}
+
+#revisorButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+    #revisorButtonsContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 .cardBody > *{
@@ -148,4 +165,16 @@
     border: rgba(0, 0, 0, 0.600) 1px solid;
     width: 15em;
     color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.responsiveObject {
+    min-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .responsiveObject {
+        min-width: 0%;
+    }    
 }
