@@ -5,7 +5,7 @@ namespace App\Jobs;
 use App\Models\Image;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class GoogleVisionSafeSearch implements ShouldQueue
 {
@@ -33,7 +33,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
         $imageAnnotator->close();
-
+        
         $safe = $response->getSafeSearchAnnotation();
         
         $adult = $safe->getAdult();
