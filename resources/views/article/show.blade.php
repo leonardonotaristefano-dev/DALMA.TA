@@ -9,7 +9,7 @@
         <div class="row justify-content-center py-5 heightCustom">
             <div class="col-12 col-md-6 mb-3">
                 @if ($article->images->count() > 0)
-                    <div id="carouselExample" class="carousel slide">
+                    <div id="carouselExample" class="carousel slide shadow rounded">
                         <div class="carousel-inner">
                             @foreach ($article->images as $key => $image)
                                 <div class="carousel-item @if($loop->first) active @endif">
