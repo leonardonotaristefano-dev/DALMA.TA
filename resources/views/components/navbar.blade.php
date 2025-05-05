@@ -41,7 +41,6 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">...</a></li>
                         </ul>
                     </li>
                 @endguest

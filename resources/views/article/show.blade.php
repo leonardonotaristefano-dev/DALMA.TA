@@ -2,9 +2,10 @@
     <div class="container">
         <div class="row justify-content-center align-items-center text-center heightCustom">
             <div class="col-12">
-                <h1 class="display-4 title_m">{{__('ui.articleDetails') . ": " . $article->title }}</h1>
+                <h1 class="display-4 title_m">{{$article->title }}</h1>
             </div>
         </div>
+        <article class="d-flex justify-content-center">
         <div class="row justify-content-center py-5 heightCustom">
             <div class="col-12 col-md-6 mb-3">
                 @if ($article->images->count() > 0)
@@ -31,14 +32,16 @@
                     <img src="https://picsum.photos/500" alt="Nessuna foto inserita dall'utente">
                 @endif
             </div>
-            <div class="col-12 col-md-6 mb-3 text-center">
-                <h2 class="display-5 title_m"> <span class="fw-bold title_m">{{__('ui.title')}}: </span> {{$article->title}}</h2>
-                <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="fw-bold">Prezzo: {{$article->price}} €</h4>
-                    <h5>Descrizione:</h5>
-                    <p>{{$article->description}}</p>
+            <div class="col-12 col-md-6 mb-3 ps-4 lh-lg">
+                <div>{{$article->created_at}}</div>
+                <div class="d-flex flex-column justify-content-start h-75">
+                    {{-- <h2 class="title_m text-start">{{$article->title}}</h2> --}}
+                    <h2 class="fs-2">{{$article->title}}</h2>
+                    <p class="fs-4">{{$article->description}}</p>
+                    <h4 class="fw-bold">{{__('ui.price'). ": " .$article->price}} €</h4>
                 </div>
             </div>
         </div>
+    </article>
     </div>
 </x-layout>

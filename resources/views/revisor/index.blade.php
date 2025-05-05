@@ -131,7 +131,7 @@
         @else
             <div class="row justify-content-center align-items-center heightCustom text-center">
                 <div class="col-12">
-                    <h1 class="display-4 title_m">{{__('ui.noArticlesToCheck')}}</h1>
+                    <h1 class="display-4 title_m">{{__('ui.noArticlesRevision')}}</h1>
                     <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{__('ui.toHomepage')}}</a>
                 </div>
             </div>

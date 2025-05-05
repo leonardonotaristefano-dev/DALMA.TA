@@ -16,14 +16,14 @@
             <label for="description" class="form-label">{{__('ui.description')}}</label>
             <textarea id="description" class="form-control @error('description') is-invalid @enderror bg-dark text-white" wire:model.blur="description" cols="30" rows="10"></textarea>
             @error('description')
-            <p class="fst-italic text-danger">{{$message}}"></p>
+            <p class="fst-italic text-danger">{{$message}}</p>
             @enderror
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">{{__('ui.price')}}</label>
             <input type="text" class="form-control @error('price') is-invalid @enderror bg-dark text-white" id="price" wire:model.blur="price">
             @error('price')
-            <p class="fst-italic text-danger">{{$message}}"></p>
+            <p class="fst-italic text-danger">{{$message}}</p>
             @enderror
         </div>
 
