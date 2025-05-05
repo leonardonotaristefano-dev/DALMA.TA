@@ -13,16 +13,28 @@ return [
     'revision' => 'Zona di revisione',
     'create' => 'Crea',
     // dropdown
-    'abbigliamento' => 'Abbigliamento',
-    'accessori' => 'Accessori',
-    'animali domestici' => 'Animali Domestici',
-    'casa e giardinaggio' => 'Casa e Giardinaggio',
-    'elettronica' => 'Elettronica',
-    'salute e bellezza' => 'Salute e Bellezza',
-    'sport' => 'Sport',
-    'giocattoli' => 'Giocattoli',
-    'motori' => 'Motori',
-    'libri e riviste' => 'Libri e Riviste',
+    // 'abbigliamento' => 'Abbigliamento',
+    // 'accessori' => 'Accessori',
+    // 'animali domestici' => 'Animali Domestici',
+    // 'casa e giardinaggio' => 'Casa e Giardinaggio',
+    // 'elettronica' => 'Elettronica',
+    // 'salute e bellezza' => 'Salute e Bellezza',
+    // 'sport' => 'Sport',
+    // 'giocattoli' => 'Giocattoli',
+    // 'motori' => 'Motori',
+    // 'libri e riviste' => 'Libri e Riviste',
+    'categoriesArray' => [
+        'Abbigliamento',
+        'Accessori',
+        'Animali Domestici',
+        'Casa e Giardinaggio',
+        'Elettronica',
+        'Salute e Bellezza',
+        'Sport',
+        'Giocattoli',
+        'Motori',
+        'Libri e Riviste',
+    ],
     // categorie
     'ofCategory' => 'Articoli della Categoria',
     'noArticles' => 'Non sono ancora stati creati articoli per questa categoria!',
@@ -41,6 +53,15 @@ return [
     'noFiles' => 'Nessun file selezionato',
     'publish' => 'Pubblica',
     'remove' => 'Rimuovi',
+    //search
+    'searchResult' => 'Risultati della ricerca',
+    'noResults' => 'Nessun articolo corrisponde alla tua ricerca',
+    //index
+    'noArticlesYet' => 'Non sono ancora stati creati articoli',
+    //show
+    'articleDetails' => 'Dettagli dell\'articolo',
+    'previous' => 'Precedente',
+    'next' => 'Successivo',
     //login
     'address' => 'Indirizzo Email',
     //register
@@ -51,6 +72,8 @@ return [
     'acceptArticle' => 'Accetta Articolo',
     'rejectArticle' => 'Rifiuta Articolo',
     'undoRevision' => 'Annulla Revisione',
+    'noArticlesRevision' => 'Nessun articolo da revisionare',
+    'toHomepage' => 'Ritorna alla Homepage',
     // footer
     'footerLinks' => 'Links',
     'contacts' => 'Contatti',
@@ -59,5 +82,7 @@ return [
     'services' => 'Servizi',
     'support' => 'Supporto',
     'accessibility' => 'Accessibilità',
+    'wantRevisor' => 'Vuoi diventare un revisore?',
+    'clickRevisor' => 'Clicca il bottone sottostante e inoltra una richiesta al nostro admin!',
     'becomeRevisor' => 'Diventa Revisore',
 ];

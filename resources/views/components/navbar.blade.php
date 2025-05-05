@@ -20,10 +20,10 @@
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
-                                href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name")}}</a>
+                                href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.categoriesArray.". ($category->id - 1))}}</a>
 
                             </li>
-                            @if (!$loop->last)
+                            @if (!$loop->last)                                
                                 <hr class="dropdown-divider">
                             @endif
                         @endforeach
@@ -57,10 +57,11 @@
                             </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('create.article') }}">{{__('ui.create')}}</a></li>
+                            
+                            @if (Auth::user()->is_revisor)
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            @if (Auth::user()->is_revisor)
                                 <li class=""><a
                                         class="dropdown-item "
                                         href="{{ route('revisor.index') }}">{{__('ui.revision')}}

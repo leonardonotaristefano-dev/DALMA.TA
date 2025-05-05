@@ -120,9 +120,9 @@
   @if(Auth::user() && !Auth::user()->is_revisor)
   <div class="d-flex w-100 mb-3">
     <div class="justify-content-center align-items-center text-center w-100">                
-        <h5 class="title_m">Vuoi diventare revisore?</h5>
-        <p class="text-muted">Clicca il bottone sottostante e inoltra una richiesta al nostro admin!</p>
-        <a href="{{ route('become.revisor') }}" class="btn buttonOpacity">Diventa revisore</a>        
+        <h5 class="title_m">{{__('ui.wantRevisor')}}</h5>
+        <p class="text-muted">{{__('ui.clickRevisor')}}</p>
+        <a href="{{ route('become.revisor') }}" class="btn buttonOpacity">{{__('ui.becomeRevisor')}}</a>        
     </div>
   </div>
   @endif 

@@ -103,7 +103,7 @@
                         <h1 class="title_m">{{ $article_to_check->title }}</h1>
                         <h3>  {{ __('ui.author') . ": " . $article_to_check->user->name }}</h3>
                         <h4>{{ $article_to_check->price }}€</h4>
-                        <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
+                        <h4 class="fst-italic text-muted">#{{__("ui.categoriesArray.". ($article_to_check->category->id - 1))}}</h4>
                         <p class="h6">{{ $article_to_check->description }}</p>
                     </div>
                     <div class="col-12 d-flex justify-content-center align-items-center mt-5 mb-5"
@@ -131,8 +131,8 @@
         @else
             <div class="row justify-content-center align-items-center heightCustom text-center">
                 <div class="col-12">
-                    <h1 class="display-4 title_m">Non ci sono articoli da revisionare</h1>
-                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">Torna alla homepage</a>
+                    <h1 class="display-4 title_m">{{__('ui.noArticlesToCheck')}}</h1>
+                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{__('ui.toHomepage')}}</a>
                 </div>
             </div>
         @endif

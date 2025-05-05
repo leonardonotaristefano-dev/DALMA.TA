@@ -7,5 +7,5 @@
             <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-info btn-rounded">{{__('ui.details')}}</a>           
         </div>
     </div>
-    <a href="{{route('byCategory', ['category' => $article->category])}}" class="badgeArticle text-end badge text-decoration-none">#{{ucfirst($article->category->name)}}</a>
+    <a href="{{route('byCategory', ['category' => $article->category])}}" class="badgeArticle text-end badge text-decoration-none">#{{__("ui.categoriesArray.". ($article->category->id - 1))}}</a>
 </div>
