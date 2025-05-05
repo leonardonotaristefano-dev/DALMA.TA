@@ -10,7 +10,7 @@ user story 10 (barra di ricerca annunci x Titolo, Descrizione, Categoria)
 
 Pablo: 
 user story 3(aggiunta collaborazione con team Presto come checker), 
-user story 7 (Google AI Helper),
+user story 7 (Google AI Helper)
 
 Arnold: 
 user story 4 (navigare sul sito in inglese)

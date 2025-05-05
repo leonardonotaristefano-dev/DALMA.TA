@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function homepage(){ 
         
-        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(8)->get(); 
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get(); 
         return view('welcome', compact('articles'));
     }
     
@@ -71,9 +71,9 @@ class PublicController extends Controller
             }           
         }
         if ($category != $query) {
-            $articles = Article::search($category)->where('is_accepted', true)->paginate(8);            
+            $articles = Article::search($category)->where('is_accepted', true)->paginate(4);            
         } else {
-            $articles = Article::search($query)->where('is_accepted', true)->paginate(8);
+            $articles = Article::search($query)->where('is_accepted', true)->paginate(4);
         }
         return view('article.searched', ['articles' => $articles, 'query' => $query]);
     }
