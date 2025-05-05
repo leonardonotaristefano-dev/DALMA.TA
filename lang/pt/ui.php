@@ -24,16 +24,16 @@ return [
     // 'motori' => 'Motores',
     // 'libri e riviste' => 'Livros e Revistas',
     'categoriesArray' => [
-        'Vestuário',
-        'Acessórios',
-        'Animais de Estimação',
-        'Casa e Jardim',
-        'Eletrônica',
+        'Eletrônicos',
+        'Roupas',
         'Saúde e Beleza',
-        'Esportes',
+        'Casa e Jardim',
         'Brinquedos',
-        'Motores',
+        'Esportes',
+        'Animais de Estimação',
         'Livros e Revistas',
+        'Acessórios',
+        'Motores'
     ],
     // categorias
     'ofCategory' => 'Artigos da Categoria',

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class PublicController extends Controller
 {
@@ -12,68 +13,76 @@ class PublicController extends Controller
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(8)->get(); 
         return view('welcome', compact('articles'));
     }
-
+    
     public function searchArticles(Request $request){
         $categoriesIt = [
-            'Abbigliamento',
-            'Accessori',
-            'Animali Domestici',
-            'Casa e Giardinaggio',
             'Elettronica',
+            'Abbigliamento',
             'Salute e Bellezza',
-            'Sport',
+            'Casa e Giardinaggio',
             'Giocattoli',
-            'Motori',
-            'Libri e Riviste'
+            'Sport',
+            'Animali Domestici',
+            'Libri e Riviste',
+            'Accessori',
+            'Motori',            
         ];
-
+        
         $categoriesEn = [
-            'Clothing',
-            'Accessories',
-            'Pets',
-            'Home and Garden',
             'Electronics',
+            'Clothing',
             'Health and Beauty',
-            'Sports',
+            'Home and Garden',
             'Toys',
-            'Motors',
-            'Books and Magazines'
+            'Sports',
+            'Pets',
+            'Books and Magazines',
+            'Accessories',
+            'Motors'
         ];
-
+        
         $categoriesPt = [
-            'Roupas',
-            'Acessórios',
-            'Animais de Estimação',
-            'Casa e Jardim',
             'Eletrônicos',
+            'Roupas',
             'Saúde e Beleza',
-            'Esportes',
+            'Casa e Jardim',
             'Brinquedos',
-            'Motores',
-            'Livros e Revistas'
+            'Esportes',
+            'Animais de Estimação',
+            'Livros e Revistas',
+            'Acessórios',
+            'Motores'
         ];
-
-        if($request->input('query') != null){
-            $query = $request->input('query');
-            if(in_array($query, $categoriesIt)||in_array($query, $categoriesEn)||in_array($query, $categoriesPt)){
-            
-                if(session('locale') == 'it'){
-                    $query = array_search($query, $categoriesIt);
-                } elseif(session('locale') == 'en'){
-                    $query = array_search($query, $categoriesEn);
-                } elseif(session('locale') == 'pt'){
-                    $query = array_search($query, $categoriesPt);
-                }
-            }
-        }
+        
         $query = $request->input('query');
-        $articles = Article::search($query)->where('is_accepted', true)->paginate(8);
+        if($query != null){
+            $category = ucfirst($query);
+
+            $index = 0;
+            if(in_array($category, $categoriesIt)){
+                $index = array_search($category, $categoriesIt);                
+                $category = $categoriesIt[$index];
+            } elseif (in_array($category, $categoriesEn)){
+                $index = array_search($category, $categoriesEn);                
+                $category = $categoriesIt[$index];
+            } elseif (in_array($category, $categoriesPt)){        
+                $index = array_search($category, $categoriesPt);
+                $category = $categoriesIt[$index];
+            }           
+        }
+        if ($category != $query) {
+            $articles = Article::search($category)->where('is_accepted', true)->paginate(8);            
+        } else {
+            $articles = Article::search($query)->where('is_accepted', true)->paginate(8);
+        }
         return view('article.searched', ['articles' => $articles, 'query' => $query]);
     }
-
+    
     public function setLanguage($lang){
-
+        
         session()->put('locale', $lang);
+        App::setLocale($lang);
+
         return redirect()->back();
     }
 }

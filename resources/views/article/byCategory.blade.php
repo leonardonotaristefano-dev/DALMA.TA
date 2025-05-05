@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center text-center heightCustom">
             <div class="col-12 pt-4">
-                <h1 class="display-2 title_m">{{__('ui.ofCategory')}} <span class="fst-italic title_m">{{__("ui.categoriesArray.". ($category->id - 1))}}</span></h1>
+                <h1 class="display-2 title_m">{{__("ui.categoriesArray.". ($category->id - 1))}}</span></h1>
             </div>
         </div>
         <div class="row justify-content-center align-items-center py-5 heightCustom px-5">

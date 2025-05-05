@@ -24,16 +24,16 @@ return [
     // 'motori' => 'Motors',
     // 'libri e riviste' => 'Books and Magazines',
     'categoriesArray' => [
-        'Clothing',
-        'Accessories',
-        'Pets',
-        'Home and Garden',
         'Electronics',
+        'Clothing',
         'Health and Beauty',
-        'Sports',
+        'Home and Garden',
         'Toys',
-        'Motors',
+        'Sports',
+        'Pets',
         'Books and Magazines',
+        'Accessories',
+        'Motors'
     ],
     // categories
     'ofCategory' => 'Articles in Category:',
