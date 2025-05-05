@@ -101,7 +101,7 @@
                 <div class="col-md-4 ps-lg-4 d-flex flex-column justify-content-center text-center align-items-center">
                     <div class="d-flex flex-column justify-content-center text-center align-items-center mx-auto">
                         <h1 class="title_m">{{ $article_to_check->title }}</h1>
-                        <h3>Autore: {{ $article_to_check->user->name }}</h3>
+                        <h3>  {{ __('ui.author') . ": " . $article_to_check->user->name }}</h3>
                         <h4>{{ $article_to_check->price }}€</h4>
                         <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
                         <p class="h6">{{ $article_to_check->description }}</p>
@@ -111,21 +111,18 @@
                         <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button id="rejectButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">Rifiuta
-                                articolo</button>
+                            <button id="rejectButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">{{__('ui.rejectArticle')}}</button>
                         </form>
                         <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button id="acceptButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">Accetta
-                                articolo</button>
+                            <button id="acceptButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">{{__('ui.acceptArticle')}}</button>
                         </form>
                         @if ($last_article)
                             <form action="{{ route('undo', ['article' => $last_article]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button id="undoButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">Annulla
-                                    revisione</button>
+                                <button id="undoButton" class="revisorButton btn py-2 px-5 fw-bold ms-2">{{__('ui.undoRevision')}}</button>
                             </form>
                         @endif
                     </div>

@@ -11,7 +11,7 @@
                     @csrf
 
                     <div class="mb-3">
-                      <label for="email" class="form-label">Indirizzo Email</label>
+                      <label for="email" class="form-label">{{__('ui.address')}}</label>
                       <input type="email" class="form-control @error('email') is-invalid @enderror bg-dark text-white" id="email" aria-describedby="emailHelp" name="email">
                       @error('email')<div class="text-danger">{{ $message }}</div>@enderror
                     </div>

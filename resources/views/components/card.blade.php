@@ -4,7 +4,7 @@
         <h4 id="cardTitle" class="card-title title_m">{{ $article->title }}</h4>
         <h6 class="card-subtitle text-body-secondary">{{ $article->price }}€</h6>        
         <div class="d-flex justify-content-evenly align-items-center">
-            <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-info btn-rounded">Dettaglio</a>           
+            <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-info btn-rounded">{{__('ui.details')}}</a>           
         </div>
     </div>
     <a href="{{route('byCategory', ['category' => $article->category])}}" class="badgeArticle text-end badge text-decoration-none">#{{ucfirst($article->category->name)}}</a>

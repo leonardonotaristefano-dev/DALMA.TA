@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="p-5 title_m">Registrati</h1>
+                <h1 class="p-5 title_m">{{__('ui.register')}}</h1>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -11,13 +11,13 @@
                     @csrf
 
                     <div class="mb-3">
-                      <label for="name" class="form-label">Nome Utente</label>
+                      <label for="name" class="form-label">{{__('ui.username')}}</label>
                       <input type="text" class="form-control bg-dark text-white @error('name') is-invalid @enderror" id="name" name="name">
                       @error('name')<div class="text-danger">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-3">
-                      <label for="email" class="form-label">Indirizzo Email</label>
+                      <label for="email" class="form-label">{{__('ui.address')}}</label>
                       <input type="email" class="form-control bg-dark text-white" id="email" aria-describedby="emailHelp" name="email">
                       @error('email')<div class="text-danger">{{ $message }}</div>@enderror
                     </div>
@@ -29,11 +29,11 @@
                     </div>
                     
                     <div class="mb-3">
-                      <label for="password_confirmation" class="form-label">Conferma Password</label>
+                      <label for="password_confirmation" class="form-label">{{__('ui.confirmPassword')}}</label>
                       <input type="password" class="form-control bg-dark text-white" id="password_confirmation" name="password_confirmation">
                       @error('password_confirmation')<div class="text-danger">{{ $message }}</div>@enderror
                     </div>
-                    <button type="submit" class="btn buttonOpacity">Registrati</button>
+                    <button type="submit" class="btn buttonOpacity">{{__('ui.register')}}</button>
                 </form>
             </div>
         </div>
