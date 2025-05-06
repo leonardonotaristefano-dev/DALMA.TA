@@ -15,6 +15,10 @@ class PublicController extends Controller
     }
     
     public function searchArticles(Request $request){
+        if ($request->input('query') == ""){
+            return redirect()->route('homepage');
+        }
+
         $categoriesIt = [
             'Elettronica',
             'Abbigliamento',
