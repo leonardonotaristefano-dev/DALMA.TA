@@ -1,5 +1,5 @@
 ## 📢 Sito di Annunci – Laravel 12
-Un'applicazione web per la pubblicazione e moderazione di annunci, sviluppata con Laravel 12, Google Vision API, Bootstrap e altri strumenti moderni.
+DALMA.TA è un'applicazione web pensata per la pubblicazione e moderazione di annunci, sviluppata con Laravel 12, Google Vision API, Bootstrap e altri strumenti moderni.
 
 ## 🚀 Funzionalità principali
 Homepage: Mostra gli ultimi annunci pubblicati e approvati.
