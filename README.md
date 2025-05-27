@@ -6,15 +6,15 @@ Homepage: Mostra gli ultimi annunci pubblicati e approvati.
 
 Navigazione semplice tramite navbar con accesso a:
 
-Login / Registrazione
+- Login / Registrazione
 
-Tutti gli annunci
+- Tutti gli annunci
 
-Categorie
+- Categorie
 
-Dashboard personale (Utente loggato o zona Revisore o zona Traduttore)
+- Dashboard personale (Utente loggato o zona Revisore o zona Traduttore)
 
-Selezione lingua (Italiano, Inglese, Portoghese)
+- Selezione lingua (Italiano, Inglese, Portoghese)
 
 ## Autenticazione
 Sistema di login e registrazione tramite Laravel Fortify.
@@ -24,15 +24,15 @@ Accessibile solo agli utenti loggati, mediante form.
 
 Un annuncio comprende:
 
-Titolo
+- Titolo
 
-Descrizione
+- Descrizione
 
-Prezzo
+- Prezzo
+ 
+- Categoria (tramite BADGE)
 
-Categoria (tramite BADGE)
-
-Immagini croppate e ridimensionate con regole di validazione E con LA possibilità di cancellarle in anteprima.
+- Immagini croppate e ridimensionate con regole di validazione e con la possibilità di cancellarle in anteprima.
 
 Gli annunci vanno in revisione prima di essere visibili pubblicamente.
 
@@ -41,11 +41,11 @@ Gli utenti possono diventare revisori tramite un pulsante nel footer che genera 
 
 I revisori accedono a una dashboard da cui possono:
 
-Approvare o rifiutare annunci
+- Approvare o rifiutare annunci
 
-Vedere il contenuto analizzato delle immagini grazie alle Google Vision API
+- Controllare il contenuto analizzato delle immagini grazie alle Google Vision API
 
-Rilevare contenuti sensibili: adult, violence, medical, ecc., rappresentati con icone Bootstrap
+- Rilevare contenuti sensibili: adult, violence, medical, ecc., rappresentati con icone Bootstrap
 
 ## Elaborazione immagini (Vision API + Imagick)
 Rilevamento di volti nelle immagini
